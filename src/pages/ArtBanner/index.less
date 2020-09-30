@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  width: 100vw;
+  height: 40vh;
+  display: block;
+  background: url(../../assets/banner.png) no-repeat center/100%;
+  /*	margin:20px auto;*/
+
+  position: relative;
+  overflow: hidden;
+}
+.loader {
+  position: absolute;
+  left: 46%;
+  top: 72%;
+}
+.character_cont {
+  top: 30%;
+  left: 42%;
+  height: 80%;
+  position: absolute;
+
+  .character {
+    position: absolute;
+    left: 43%;
+    /* -webkit-animation: falling 2s forwards;*/
+    transform: scale(1);
+    background: url(../../../public/girl.gif) no-repeat;
+    width: 60px;
+    height: 130px;
+  }
+
+  .walking {
+    background-position-x: -700px;
+    animation: walking 0.8s steps(10) infinite;
+    -webkit-animation: walking 0.8s steps(10) infinite;
+    -moz-animation: walking 0.8s steps(10) infinite;
+  }
+  @keyframes walking {
+    from {
+      background-position-x: -710px;
+    }
+    to {
+      background-position-x: -1350px;
+    }
+  }
+  @-webkit-keyframes walking {
+    from {
+      background-position-x: -710px;
+    }
+    to {
+      background-position-x: -1350px;
+    }
+  }
+}
